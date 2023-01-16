@@ -1,6 +1,6 @@
 <template>
     <ul class="tasks-list">
-        <one-task v-for="task in tasks" :text="task.text" :id="task.id" :key="task.id"></one-task>
+        <one-task v-for="task in tasks" :text="task.text" :id="task.id" :key="task.id" :is-important="task.isImportant"></one-task>
     </ul>
 </template>
 <script>

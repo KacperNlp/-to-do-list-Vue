@@ -21,6 +21,13 @@ export default {
     }
   },
 
+  provide() {
+    return {
+      deleteTask: this.deleteTask,
+      changePriority: this.changePriority
+    }
+  },
+
   computed: {
     isTasksNotEmpty() {
       return !!this.tasks.length;
@@ -37,6 +44,27 @@ export default {
       }).catch(err => {
         throw new Error(err);
       })
+  },
+
+  methods: {
+    deleteTask(id) {
+      const tasksAfterRemoveDeltedOne = this.tasks.filter(task => task.id !== id);
+      this.tasks = tasksAfterRemoveDeltedOne;
+    },
+
+    changePriority(id) {
+      const tasksArrayAfterChangingPriority = this.tasks.map(task => {
+        if(task.id === id) {
+          const prevValue = task.isImportant;
+          task.isImportant = !prevValue;
+        }
+        return task
+      });
+
+      console.log(tasksArrayAfterChangingPriority);
+
+      this.tasks = tasksArrayAfterChangingPriority;
+    }
   }
 }
 </script>

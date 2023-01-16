@@ -1,9 +1,14 @@
 <template>
     <p>{{ text }}</p>
+    <p v-if="isImportant">This ticket is IMPORTANT!</p>
+    <button @click="handleDeleteTask">Delete</button>
+    <button @click="handleChangePriority">Change Priority!</button>
 </template>
 <script>
 export default {
     name: 'OneTask',
+    inject: ['deleteTask', 'changePriority'],
+
     props: {
         text: {
             type: String,
@@ -12,6 +17,20 @@ export default {
         id: {
             type: Number,
             required: true
+        },
+        isImportant: {
+            type: Boolean,
+            default: false
+        }
+    }, 
+
+    methods: {
+        handleDeleteTask() {
+            this.deleteTask(this.id);
+        },
+
+        handleChangePriority() {
+            this.changePriority(this.id);
         }
     }
 }

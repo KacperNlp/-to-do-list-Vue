@@ -2,11 +2,13 @@
   "tasks": [
     {
       "id": 1,
-      "text": "First ticket"
+      "text": "First ticket",
+      "isImportant": false
     },
     {
       "id": 2,
-      "text": "Second ticket"
+      "text": "Second ticket",
+      "isImportant": true
     }
   ]
 }
