@@ -1,24 +1,19 @@
-# app-29-nuxt
+## To do list
 
-## Project setup
-```
-npm install
-```
+### Tech stack
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+<ul>
+    <li>Vue</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Functionality
 
-### Lints and fixes files
-```
-npm run lint
-```
+<p>Thanks to that app you can create list with your task, you can also delate old task and change priority of existing ones</p>
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### How it looks like:
+
+<strong>Mobile:</strong>
+<strong>Desktop</strong>

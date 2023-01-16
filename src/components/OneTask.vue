@@ -1,8 +1,10 @@
 <template>
-    <p>{{ text }}</p>
-    <p v-if="isImportant">This ticket is IMPORTANT!</p>
-    <button @click="handleDeleteTask">Delete</button>
-    <button @click="handleChangePriority">Change Priority!</button>
+    <li class="task">
+        <p>{{ text }}</p>
+        <p v-if="isImportant">This ticket is IMPORTANT!</p>
+        <button @click="handleDeleteTask">Delete</button>
+        <button @click="handleChangePriority">Change Priority!</button>
+    </li>
 </template>
 <script>
 export default {
