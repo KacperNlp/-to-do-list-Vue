@@ -1,0 +1,12 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "First ticket"
+    },
+    {
+      "id": 2,
+      "text": "Second ticket"
+    }
+  ]
+}
