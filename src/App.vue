@@ -1,5 +1,8 @@
 <template>
   <div class="app">
+    <header class="app-header">
+      <h1>To do list!</h1>
+    </header>
     <add-task-form @add-task="addNewTask"></add-task-form>
     <tasks-list v-if="isTasksNotEmpty" :tasks="tasks"></tasks-list>
     <message-component v-else></message-component>
@@ -77,4 +80,18 @@ export default {
 </script>
 
 <style>
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.app-header {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 50px;
+  text-align: center;
+  background: #658864;
+  color: rgb(233, 230, 230);
+}
 </style>
