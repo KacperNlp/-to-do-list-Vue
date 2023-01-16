@@ -7,3 +7,8 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     background: rgb(233, 230, 230);
 }
+
+textarea,
+input { 
+    font-family: 'Roboto Condensed', sans-serif;
+}

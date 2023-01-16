@@ -91,7 +91,7 @@ export default {
   padding: 10px;
   margin-bottom: 50px;
   text-align: center;
-  background: #658864;
+  background: rgb(101, 136, 100);
   color: rgb(233, 230, 230);
 }
 </style>
