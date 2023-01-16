@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <add-task-form></add-task-form>
+    <add-task-form @add-task="addNewTask"></add-task-form>
     <tasks-list v-if="isTasksNotEmpty" :tasks="tasks"></tasks-list>
     <message-component v-else></message-component>
   </div>
@@ -47,6 +47,13 @@ export default {
   },
 
   methods: {
+    addNewTask(newTask) {
+      const arrayWithNewTask = this.tasks;
+      arrayWithNewTask.unshift(newTask);
+
+      this.tasks = arrayWithNewTask;
+    },
+
     deleteTask(id) {
       const tasksAfterRemoveDeltedOne = this.tasks.filter(task => task.id !== id);
       this.tasks = tasksAfterRemoveDeltedOne;
