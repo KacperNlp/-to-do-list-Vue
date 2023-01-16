@@ -22,8 +22,10 @@ export default {
 .tasks-list {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
+    grid-gap: 60px 30px;
     width: 90%;
+    max-width: 1200px;
+    padding: 0 0 50px 0;
     list-style: none;
 }
 
